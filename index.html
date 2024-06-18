@@ -11,7 +11,7 @@
             padding: 0;
             background-color: #121212;
             color: #ffffff;
-            overflow: hidden; /* Prevent scrolling */
+            overflow: hidden; /* Prevent scrolling on the body */
         }
         .container {
             max-width: 800px;
@@ -21,23 +21,32 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             position: relative;
             z-index: 1;
+            overflow-y: auto; /* Enable vertical scrolling within the container */
+            max-height: 80vh; /* Limit height and enable scrolling */
+            border-radius: 10px; /* Rounded corners */
         }
         .profile-pic {
             text-align: center;
+            margin-bottom: 20px;
         }
         .profile-pic img {
             border-radius: 50%;
             width: 150px;
             height: 150px;
+            border: 3px solid #ffffff; /* White border */
         }
         h1, h2 {
             text-align: center;
-            margin: 0;
+            margin: 10px 0;
         }
         .call-sign {
             text-align: center;
             font-size: 1.2em;
             margin-top: 5px;
+            color: #0073b1; /* LinkedIn blue */
+        }
+        .call-sign:hover {
+            text-decoration: underline; /* Underline on hover */
         }
         .links {
             text-align: center;
@@ -47,6 +56,9 @@
             margin: 0 10px;
             text-decoration: none;
             color: #0073b1; /* LinkedIn blue */
+        }
+        .links a:hover {
+            text-decoration: underline; /* Underline on hover */
         }
         .contact, .skills, .projects {
             text-align: center;
@@ -101,6 +113,24 @@
         
         <div class="contact">
             <p>Email: <a href="mailto:sprajwalln.cs21@rvce.edu.in">sprajwalln.cs21@rvce.edu.in</a></p>
+        </div>
+        
+        <div class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming Languages: C, C++, Python, JavaScript</li>
+                <li>Web Development: HTML, CSS, JavaScript</li>
+                <li>Database Management: MySQL, MongoDB</li>
+            </ul>
+        </div>
+        
+        <div class="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>IoT Smart Home System:</strong> Developed an IoT-based smart home system for automation and security using Arduino and Raspberry Pi.</li>
+                <li><strong>Online Portfolio Website:</strong> Created a personal portfolio website to showcase projects and skills using HTML, CSS, and JavaScript.</li>
+                <li><strong>Machine Learning Project:</strong> Implemented a machine learning model to predict house prices using Python and scikit-learn.</li>
+            </ul>
         </div>
         
         <div class="footer">
