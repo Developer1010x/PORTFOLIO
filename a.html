@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+            overflow: hidden; /* Prevent scrolling */
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(30, 30, 30, 0.8); /* Translucent background */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+            z-index: 1;
+        }
+        .profile-pic {
+            text-align: center;
+        }
+        .profile-pic img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        h1, h2 {
+            text-align: center;
+            margin: 0;
+        }
+        .call-sign {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 5px;
+        }
+        .links {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #0073b1; /* LinkedIn blue */
+        }
+        .contact, .skills, .projects {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .skills ul, .projects ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills li, .projects li {
+            background-color: #282828;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #aaaaaa;
+        }
+        #matrix {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: #000;
+            color: #0F0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+    <div class="container">
+        <div class="profile-pic">
+            <img src="/Users/sprajwalln/Desktop/Website/unnamed.jpg" alt="Profile Picture">
+        </div>
+        <h1>S Prajwall Narayana</h1>
+        <div class="call-sign">Developer1010x</div>
+        <h2>Computer Science Engineering Student</h2>
+        <p>Hello! I'm S Prajwall Narayana, a passionate Computer Science Engineering student based in India. I actively engage in coding competitions and IoT projects, expanding my knowledge of software development. Let's connect and discuss how we can contribute to this exciting field together!</p>
+        
+
+        
+        <div class="links">
+            <a href="https://drive.google.com/file/d/1BCWX6H4tUHC3Lx3KrZd8tBVApDwBUvbS/view?usp=share_link" class="My Resume">My Resume</a>
+            <a href="https://github.com/developer1010x" class="github1">GitHub 1</a>
+            <a href="https://github.com/developer1100x" class="Website"> Website</a>
+            <a href="https://www.linkedin.com/in/s-prajwall-n-1a82b7262/" class="linkedin">LinkedIn</a>
+        </div>
+        
+        <div class="contact">
+            <p>Email: <a href="mailto:sprajwalln.cs21@rvce.edu.in">sprajwalln.cs21@rvce.edu.in</a></p>
+        </div>
+        
+        <div class="footer">
+            <p>&copy;  2024 S Prajwall Narayana. All rights reserved.</p>
+        </div>
+    </div>
+    <script>
+        // Matrix effect script
+        const canvas = document.getElementById('matrix');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const letters = '10101000101010101';
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+
+        const drops = [];
+
+        for (let x = 0; x < columns; x++) {
+            drops[x] = 1;
+        }
+
+        function draw() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#0F0';
+            ctx.font = `${fontSize}px monospace`;
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = letters.charAt(Math.floor(Math.random() * letters.length));
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+
+                drops[i]++;
+            }
+        }
+
+        setInterval(draw, 33);
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            drops.length = Math.floor(canvas.width / fontSize);
+            for (let x = 0; x < drops.length; x++) {
+                drops[x] = 1;
+            }
+        });
+    </script>
+</body>
+</html>
