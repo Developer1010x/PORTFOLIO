@@ -60,15 +60,23 @@
         .links a:hover {
             text-decoration: underline; /* Underline on hover */
         }
-        .contact, .skills, .projects {
+        .contact, .skills, .projects, .mini-projects {
             text-align: center;
             margin-top: 20px;
+            padding: 20px; /* Add padding for spacing and style */
+            background-color: rgba(40, 40, 40, 0.8); /* Adjust background color */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
         }
-        .skills ul, .projects ul {
+        .skills h2, .projects h2, .mini-projects h2 {
+            margin-bottom: 10px; /* Adjust margin for spacing */
+            color: #ffffff; /* Text color */
+        }
+        .skills ul, .projects ul, .mini-projects ul {
             list-style-type: none;
             padding: 0;
         }
-        .skills li, .projects li {
+        .skills li, .projects li, .mini-projects li {
             background-color: #282828;
             margin: 10px 0;
             padding: 10px;
@@ -124,7 +132,7 @@
             </ul>
         </div>
         
-        <div class="Projects">
+        <div class="projects">
             <h2>Projects</h2>
             <ul>
                 <li><strong>IoT Robotic Rover with Arm System:</strong> Developed an IoT-based smart home system for automation and security using ESP32 and Yolo V3.</li>
@@ -137,10 +145,10 @@
             </ul>
         </div>
         
-        <div class="Mini projects">
+        <div class="mini-projects">
             <h2>Mini Projects</h2>
             <ul>
-                 <li><strong>Interactive Game:</strong> <a href="https://developer1010x.github.io/game/">Play my interactive game!</a></li>
+                <li><strong>Interactive Game:</strong> <a href="https://developer1010x.github.io/game/">Play my interactive game!</a></li>
             </ul>
         </div>
         
