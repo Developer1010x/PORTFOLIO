@@ -11,7 +11,8 @@ export default function Home() {
         <div className="btn-row">
           <Link href="/contact" className="btn btn-primary">Book a call</Link>
           <Link href="/projects" className="btn btn-ghost">View selected work →</Link>
-          <a href={profile.portfolio} className="btn btn-ghost" target="_blank" rel="noopener">Resume ↗</a>
+          <a href={profile.linkedin} className="btn btn-ghost" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href={profile.github} className="btn btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
         <div className="stats">
           {stats.map((s) => (
