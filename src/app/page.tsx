@@ -1,69 +1,62 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
+import { profile, stats, skills, projects, experience } from "@/lib/content";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <section className="container hero">
+        <p className="eyebrow">AI · Agents · Production LLM Systems · DevOps</p>
+        <h1>{profile.headline}</h1>
+        <p className="lead">{profile.blurb}</p>
+        <div className="btn-row">
+          <Link href="/contact" className="btn btn-primary">Book a call</Link>
+          <Link href="/projects" className="btn btn-ghost">View selected work →</Link>
+          <a href={profile.portfolio} className="btn btn-ghost" target="_blank" rel="noopener">Resume ↗</a>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="stats">
+          {stats.map((s) => (
+            <div className="stat" key={s.label}>
+              <div className="num">{s.value}</div>
+              <div className="lbl">{s.label}</div>
+            </div>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="container section">
+        <p className="eyebrow">Now</p>
+        <h2 className="section-title">{experience[0].title} — {experience[0].company}</h2>
+        <p className="section-sub">{experience[0].summary} <Link href="/experience" style={{ color: "var(--accent)" }}>See full experience →</Link></p>
+        <div className="tags">
+          {skills.flatMap((g) => g.items).slice(0, 22).map((t) => <span className="tag" key={t}>{t}</span>)}
+        </div>
+      </section>
+
+      <section className="container section">
+        <p className="eyebrow">Selected work</p>
+        <h2 className="section-title">Projects that show how I think</h2>
+        <p className="section-sub">A few of the systems I&apos;ve shipped. <Link href="/projects" style={{ color: "var(--accent)" }}>See all →</Link></p>
+        <div className="grid grid-2">
+          {projects.slice(0, 4).map((p) => (
+            <a className="card" key={p.name} href={p.href} target="_blank" rel="noopener">
+              <div className="meta" style={{ fontFamily: "var(--mono)", fontSize: 12, color: "var(--fg-faint)", marginBottom: 8 }}>{p.tag}</div>
+              <h3 style={{ margin: "0 0 6px" }}>{p.name} ↗</h3>
+              <p style={{ color: "var(--fg-dim)", margin: 0 }}>{p.summary}</p>
+              <div className="tags">{p.tech.slice(0, 4).map((t) => <span className="tag" key={t}>{t}</span>)}</div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="container section">
+        <p className="eyebrow">Contact</p>
+        <h2 className="section-title">Let&apos;s build something reliable.</h2>
+        <p className="section-sub">Open to full-time roles and select freelance projects — AI infrastructure, LLM platform, RAG, and DevOps/SRE. Based in Bengaluru, open to relocation and remote.</p>
+        <div className="btn-row" style={{ marginTop: 0 }}>
+          <Link href="/contact" className="btn btn-primary">Book a call</Link>
+          <Link href="/services" className="btn btn-ghost">Freelance services →</Link>
+        </div>
+      </section>
+    </>
   );
 }
