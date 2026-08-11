@@ -11,6 +11,7 @@ export default function Home() {
         <div className="btn-row">
           <Link href="/contact" className="btn btn-primary">Book a call</Link>
           <Link href="/projects" className="btn btn-ghost">View selected work →</Link>
+          <a href={profile.resume} className="btn btn-ghost" download>Resume ↓</a>
           <a href={profile.linkedin} className="btn btn-ghost" target="_blank" rel="noopener">LinkedIn ↗</a>
           <a href={profile.github} className="btn btn-ghost" target="_blank" rel="noopener">GitHub ↗</a>
         </div>

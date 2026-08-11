@@ -23,6 +23,7 @@ export function Footer() {
           <a href={profile.github} target="_blank" rel="noopener">GitHub ↗</a>
           <a href={profile.linkedin} target="_blank" rel="noopener">LinkedIn ↗</a>
           <a href={`mailto:${profile.email}`}>Email</a>
+          <a href={profile.resume} download>Resume ↓</a>
         </div>
       </div>
       <div className="container copyright">© 2026 {profile.name}</div>

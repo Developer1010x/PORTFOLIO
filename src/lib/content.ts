@@ -14,6 +14,7 @@ export const profile = {
   github: "https://github.com/Developer1010x",
   linkedin: "https://www.linkedin.com/in/s-prajwall-narayana-64b57b427",
   portfolio: "https://sprajwallnarayana.vercel.app",
+  resume: "/S-Prajwall-Narayana-Resume.pdf",
 };
 
 export const stats = [
