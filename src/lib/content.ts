@@ -133,6 +133,19 @@ export const projects: Project[] = [
     href: "https://github.com/Developer1010x/Arogya-Sathi",
   },
   {
+    name: "Audier",
+    tag: "Flutter · Local-first · On-device AI",
+    summary: "Private, local-first reader and audiobook player over your own library — neural speech, OCR and study aids, with the cloud as an opt-in door rather than the default.",
+    bullets: [
+      "Cross-platform Flutter app reading PDF, EPUB, Markdown and plain text. Format stops at the reader: both readers emit a plain list of sentences, so speech, highlighting, bookmarks, stats and the AI layer are entirely format-blind.",
+      "Chunked, pipelined Piper synthesis starts audio in about a second instead of ten, with sentence-level follow-along highlighting, tap-a-sentence-to-start, background playback, a boundary-aware sleep timer and a glanceable Car Mode.",
+      "A local classifier gates the AI path — a storybook has no code path to a model at all. Six providers behind one interface; the summariser map-reduces over the context budget because an overflowing request does not fail loudly, it silently answers about text the model never read.",
+      "198 tests across 17 suites, none touching the network or a real library; the classifier suite asserts its own bias, that ties must fall to storybook.",
+    ],
+    tech: ["Flutter", "Dart", "Piper TTS", "Tesseract", "Ollama", "Flatpak/Snap"],
+    href: "https://github.com/Developer1010x/audiobook-reader",
+  },
+  {
     name: "openplay",
     tag: "Rust · Systems · Networking",
     summary: "Open-source screen-casting system in Rust — AirPlay, Miracast, and a native WebRTC protocol.",
