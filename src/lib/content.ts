@@ -249,8 +249,22 @@ export const community = {
   ],
 };
 
-// Starter blog posts (MDX-free for now — plain content). Expand freely.
-export const posts = [
+// Blog posts. Plain content, no MDX.
+//
+// A post is PUBLISHED only when it has a non-empty `body`: an array of
+// paragraphs. Posts without one are listed as planned and are not linked, do not
+// get a generated page, and stay out of the sitemap — so the site never shows a
+// real headline that dead-ends in an empty page.
+export type Post = {
+  slug: string;
+  title: string;
+  date: string;
+  tag: string;
+  excerpt: string;
+  body?: string[];
+};
+
+export const posts: Post[] = [
   {
     slug: "what-oomkilled-really-means",
     title: "What OOMKilled Actually Means (from someone who's paged for it)",

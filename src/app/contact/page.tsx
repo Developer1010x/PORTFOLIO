@@ -1,6 +1,6 @@
 import { profile } from "@/lib/content";
 
-export const metadata = { title: "Contact — S Prajwall Narayana" };
+export const metadata = { title: "Contact" };
 
 export default function ContactPage() {
   return (

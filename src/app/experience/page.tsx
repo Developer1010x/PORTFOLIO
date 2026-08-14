@@ -1,6 +1,6 @@
 import { experience } from "@/lib/content";
 
-export const metadata = { title: "Experience — S Prajwall Narayana" };
+export const metadata = { title: "Experience" };
 
 export default function ExperiencePage() {
   return (

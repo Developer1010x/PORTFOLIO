@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { services } from "@/lib/content";
 
-export const metadata = { title: "Services — S Prajwall Narayana" };
+export const metadata = { title: "Services" };
 
 export default function ServicesPage() {
   return (

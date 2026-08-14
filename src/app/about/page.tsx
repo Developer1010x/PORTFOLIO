@@ -1,6 +1,6 @@
 import { profile, education, skills } from "@/lib/content";
 
-export const metadata = { title: "About — S Prajwall Narayana" };
+export const metadata = { title: "About" };
 
 export default function AboutPage() {
   return (
