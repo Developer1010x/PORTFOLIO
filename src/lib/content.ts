@@ -127,7 +127,7 @@ export const projects: Project[] = [
     bullets: [
       "Deterministic, rule-based drug-interaction and crisis-detection safety layer the language model cannot override.",
       "62-case labelled evaluation harness wired in as a CI merge gate, crisis detection recall 1.00 / precision 0.93; emergency 1.00 / 1.00; drug screening 1.00 / 1.00. Building it surfaced a real missed self-harm disclosure.",
-      "LangGraph report pipeline with multi-model routing; runs fully offline on quantised models, demonstrated on a Raspberry Pi. 3rd place, college final-year showcase. Research paper upcoming.",
+      "LangGraph report pipeline with multi-model routing; runs fully offline on quantised models, demonstrated on a Raspberry Pi. 3rd place, college final-year showcase.",
     ],
     tech: ["LangGraph", "Ollama", "PyTorch", "YOLOv8", "CI eval harness"],
     href: "https://github.com/Developer1010x/Arogya-Sathi",
@@ -262,7 +262,7 @@ export const education = [
     degree: "B.E. Computer Science & Engineering",
     grade: "First Class",
     period: "Dec 2021 – Aug 2025",
-    note: "Won the department final-year major project; authored five research papers (three published, two under review). Active in NSS, the Accelerate Club and the Photography Club. Best All-Rounder, NSS.",
+    note: "3rd place in the college final-year major project showcase; authored four research papers (three published, one accepted for publication by IEEE). Active in NSS, the Accelerate Club and the Photography Club. Best All-Rounder, NSS.",
   },
   {
     school: "National Academy of Learning",

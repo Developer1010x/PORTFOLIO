@@ -7,7 +7,7 @@ export default function PublicationsPage() {
     <section className="container section" style={{ borderTop: "none" }}>
       <p className="eyebrow">Publications</p>
       <h1 style={{ fontSize: "2.4rem" }}>Peer-reviewed work</h1>
-      <p className="section-sub">Three published papers (two IEEE, one Springer), with two further papers under review.</p>
+      <p className="section-sub">Three published papers (two IEEE, one Springer), with a fourth accepted for publication by IEEE.</p>
 
       {publications.map((p, i) => (
         <div className="entry" key={p.title}>
@@ -19,7 +19,7 @@ export default function PublicationsPage() {
           </div>
         </div>
       ))}
-      <p style={{ color: "var(--fg-faint)", fontFamily: "var(--mono)", fontSize: 13, marginTop: 8 }}>+ two further papers under review.</p>
+      <p style={{ color: "var(--fg-faint)", fontFamily: "var(--mono)", fontSize: 13, marginTop: 8 }}>+ one further paper accepted for publication by IEEE.</p>
     </section>
   );
 }
