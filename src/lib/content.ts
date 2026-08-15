@@ -134,14 +134,15 @@ export const projects: Project[] = [
   },
   {
     name: "Audier",
-    tag: "Flutter · Linux · Local-first",
-    summary: "A private reader and audiobook player for your own book library, released, installable, Linux.",
+    tag: "Flutter · Local-first · On-device AI",
+    summary: "Private, local-first reader and audiobook player over your own library, neural speech, OCR and study aids, with the cloud as an opt-in door rather than the default.",
     bullets: [
-      "Opens PDF, EPUB, Markdown and plain text; reads them aloud in a neural voice (Piper) with follow-along highlighting; OCRs scanned pages; optional AI study aids for textbooks across six providers.",
-      "Privacy is the design constraint, not a feature: books are read where they sit and never copied or uploaded, speech and OCR run on the machine, and a cloud provider is never the default and always states what it is about to send before it sends it.",
-      "Ships as an AppImage, a .deb and a tarball built by GitHub Actions. 202 tests, and a serialising gate over the playback queue that closes a race where two concurrent look-ahead calls could double-queue a sentence and skip the next.",
+      "Cross-platform Flutter app reading PDF, EPUB, Markdown and plain text. Format stops at the reader: both readers emit a plain list of sentences, so speech, highlighting, bookmarks, stats and the AI layer are entirely format-blind.",
+      "Chunked, pipelined Piper synthesis starts audio in about a second instead of ten, with sentence-level follow-along highlighting, tap-a-sentence-to-start, background playback, a boundary-aware sleep timer and a glanceable Car Mode.",
+      "A local classifier gates the AI path, a storybook has no code path to a model at all. Six providers behind one interface; the summariser map-reduces over the context budget because an overflowing request does not fail loudly, it silently answers about text the model never read.",
+      "202 tests across 17 suites, none touching the network or a real library; the classifier suite asserts its own bias, that ties must fall to storybook.",
     ],
-    tech: ["Flutter", "Dart", "Piper TTS", "Tesseract", "GitHub Actions"],
+    tech: ["Flutter", "Dart", "Piper TTS", "Tesseract", "Ollama", "Flatpak/Snap"],
     href: "https://github.com/Developer1010x/audiobook-reader/releases/tag/v1.0.0",
   },
   {
