@@ -1,13 +1,13 @@
 import { projects } from "@/lib/content";
 
-export const metadata = { title: "Projects — S Prajwall Narayana" };
+export const metadata = { title: "Projects" };
 
 export default function ProjectsPage() {
   return (
     <section className="container section" style={{ borderTop: "none" }}>
       <p className="eyebrow">Selected work</p>
       <h1 style={{ fontSize: "2.4rem" }}>Projects that show how I think</h1>
-      <p className="section-sub">Systems shipped end to end — with the real numbers where they exist. Every one links to its source.</p>
+      <p className="section-sub">Systems shipped end to end, with the real numbers where they exist. Every one links to its source.</p>
 
       {projects.map((p, i) => (
         <div className="entry" key={p.name}>

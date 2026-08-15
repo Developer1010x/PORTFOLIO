@@ -27,7 +27,7 @@ export default function Home() {
 
       <section className="container section">
         <p className="eyebrow">Now</p>
-        <h2 className="section-title">{experience[0].title} — {experience[0].company}</h2>
+        <h2 className="section-title">{experience[0].title} at {experience[0].company}</h2>
         <p className="section-sub">{experience[0].summary} <Link href="/experience" style={{ color: "var(--accent)" }}>See full experience →</Link></p>
         <div className="tags">
           {skills.flatMap((g) => g.items).slice(0, 22).map((t) => <span className="tag" key={t}>{t}</span>)}
@@ -53,7 +53,7 @@ export default function Home() {
       <section className="container section">
         <p className="eyebrow">Contact</p>
         <h2 className="section-title">Let&apos;s build something reliable.</h2>
-        <p className="section-sub">Open to full-time roles and select freelance projects — AI infrastructure, LLM platform, RAG, and DevOps/SRE. Based in Bengaluru, open to relocation and remote.</p>
+        <p className="section-sub">Open to full-time roles and select freelance projects: AI infrastructure, LLM platform, RAG, and DevOps/SRE. Based in Bengaluru, open to relocation and remote.</p>
         <div className="btn-row" style={{ marginTop: 0 }}>
           <Link href="/contact" className="btn btn-primary">Book a call</Link>
           <Link href="/services" className="btn btn-ghost">Freelance services →</Link>

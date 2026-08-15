@@ -1,6 +1,6 @@
 import { profile, education, skills } from "@/lib/content";
 
-export const metadata = { title: "About — S Prajwall Narayana" };
+export const metadata = { title: "About" };
 
 export default function AboutPage() {
   return (
@@ -9,7 +9,7 @@ export default function AboutPage() {
       <h1 style={{ fontSize: "2.4rem" }}>DevOps engineer converting into AI infrastructure</h1>
       <p className="lead">{profile.blurb}</p>
       <p style={{ color: "var(--fg-dim)", maxWidth: 680, marginTop: 16 }}>
-        I run Linux, Kubernetes, Docker, CI/CD and Postgres for a living, and I&apos;m building the AI half on top of that — agentic and LLM systems over MCP, RAG with evaluation, and local/offline model deployment. I take ambiguous problems from prototype to a deployed, monitored system and stay responsible for it afterwards.
+        I run Linux, Kubernetes, Docker, CI/CD and Postgres for a living, and I&apos;m building the AI half on top of that: agentic and LLM systems over MCP, RAG with evaluation, and local/offline model deployment. I take ambiguous problems from prototype to a deployed, monitored system and stay responsible for it afterwards.
       </p>
 
       <h2 className="section-title" style={{ marginTop: 40 }}>Education</h2>

@@ -1,6 +1,6 @@
 import { community } from "@/lib/content";
 
-export const metadata = { title: "Social — S Prajwall Narayana" };
+export const metadata = { title: "Social" };
 
 export default function SocialPage() {
   return (

@@ -1,6 +1,6 @@
 import { publications } from "@/lib/content";
 
-export const metadata = { title: "Publications — S Prajwall Narayana" };
+export const metadata = { title: "Publications" };
 
 export default function PublicationsPage() {
   return (

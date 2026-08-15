@@ -1,13 +1,13 @@
 import { profile } from "@/lib/content";
 
-export const metadata = { title: "Contact — S Prajwall Narayana" };
+export const metadata = { title: "Contact" };
 
 export default function ContactPage() {
   return (
     <section className="container section" style={{ borderTop: "none" }}>
       <p className="eyebrow">Contact</p>
       <h1 style={{ fontSize: "2.4rem" }}>Let&apos;s build something reliable.</h1>
-      <p className="section-sub">Open to full-time roles and select freelance projects. The fastest way to reach me is email — I reply within a day.</p>
+      <p className="section-sub">Open to full-time roles and select freelance projects. The fastest way to reach me is email. I reply within a day.</p>
       <div className="grid grid-2">
         <a className="card" href={`mailto:${profile.email}`}>
           <h3 style={{ margin: "0 0 4px" }}>Email ↗</h3>
