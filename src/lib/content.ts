@@ -20,7 +20,7 @@ export const profile = {
 export const stats = [
   { value: "3", label: "peer-reviewed papers (IEEE · Springer)" },
   { value: "1.00", label: "crisis-detection recall (62-case CI-gated eval)" },
-  { value: "6", label: "shipped open-source projects" },
+  { value: "10", label: "shipped open-source projects" },
 ];
 
 export const skills: { group: string; items: string[] }[] = [
@@ -133,6 +133,18 @@ export const projects: Project[] = [
     href: "https://github.com/Developer1010x/Arogya-Sathi",
   },
   {
+    name: "Audier",
+    tag: "Flutter · Linux · Local-first",
+    summary: "A private reader and audiobook player for your own book library — released, installable, Linux.",
+    bullets: [
+      "Opens PDF, EPUB, Markdown and plain text; reads them aloud in a neural voice (Piper) with follow-along highlighting; OCRs scanned pages; optional AI study aids for textbooks across six providers.",
+      "Privacy is the design constraint, not a feature: books are read where they sit and never copied or uploaded, speech and OCR run on the machine, and a cloud provider is never the default and always states what it is about to send before it sends it.",
+      "Ships as an AppImage, a .deb and a tarball built by GitHub Actions. 202 tests, and a serialising gate over the playback queue that closes a race where two concurrent look-ahead calls could double-queue a sentence and skip the next.",
+    ],
+    tech: ["Flutter", "Dart", "Piper TTS", "Tesseract", "GitHub Actions"],
+    href: "https://github.com/Developer1010x/audiobook-reader/releases/tag/v1.0.0",
+  },
+  {
     name: "openplay",
     tag: "Rust · Systems · Networking",
     summary: "Open-source screen-casting system in Rust — AirPlay, Miracast, and a native WebRTC protocol.",
@@ -174,6 +186,51 @@ export const projects: Project[] = [
     bullets: ["Flags synthesised or cloned speech, trained on public audio-deepfake datasets. Research paper upcoming."],
     tech: ["Python", "PyTorch", "Signal processing"],
     href: "https://github.com/Developer1010x/Deepfake-Audio-and-AI-Content-Detection",
+  },
+  {
+    name: "KnotesNeo",
+    tag: "TypeScript · Next.js · Static",
+    summary: "A study-material catalogue built around the problem that its links keep dying.",
+    bullets: [
+      "Study material lives in Drive folders owned by students who graduate, and those folders get purged — so a link that worked last year quietly dies. A weekly checker distinguishes \"deleted\" from \"needs an institutional login\", badges dead links in the UI, and turns the failures into a public /gaps page: a to-do list for anyone who wants to help.",
+      "16 departments → year → semester → subject, with client-side search, a command palette, bookmarks and progress, a PWA, and an RSS feed dated from git history.",
+      "538 statically prerendered pages, TypeScript strict, no backend and no database.",
+    ],
+    tech: ["Next.js 15", "React 19", "TypeScript", "Tailwind"],
+    href: "https://github.com/Developer1010x/KnotesCentral-Source-Code",
+  },
+  {
+    name: "universal-converter",
+    tag: "Python · CLI",
+    summary: "A file-conversion toolkit that routes across converters instead of only matching pairs directly.",
+    bullets: [
+      "Breadth-first route search over the converter registry, so a pair with no direct converter is reached through intermediates rather than failing.",
+      "A --doctor capability audit that reports which conversions genuinely work on this machine given the installed optional dependencies, instead of advertising formats it cannot handle.",
+    ],
+    tech: ["Python", "ffmpeg", "Pillow", "pandas"],
+    href: "https://github.com/Developer1010x/universal-converter",
+  },
+  {
+    name: "MP3 Studio",
+    tag: "Python · Desktop · Audio",
+    summary: "Desktop editor for MP3 metadata, album art, lyrics and EQ, packaged for the Snap Store.",
+    bullets: [
+      "Tag editor with automatic album-art and lyrics fetch, a five-band equaliser with presets, and batch export across a queue.",
+      "Non-destructive: EQ is applied only on export, while tag edits are written in place.",
+    ],
+    tech: ["Python", "Tkinter", "pydub", "mutagen", "Snapcraft"],
+    href: "https://github.com/Developer1010x/mp3-studio",
+  },
+  {
+    name: "World Monitor",
+    tag: "Open-source contribution · TypeScript",
+    summary: "Contributor to a real-time geopolitical and financial intelligence dashboard — not my project.",
+    bullets: [
+      "Merged upstream PR koala73/worldmonitor#5459: an expandable terminal price chart with its own interaction layer for the markets panel, plus a fix to the OpenSky dev proxy path. +892 / −39 across 37 files.",
+      "The codebase is ~330k lines of TypeScript with roughly 40 contributors, 933 test files, 21 CI workflows and 281 protobuf contracts. Getting a change through that review gate is the point of listing it.",
+    ],
+    tech: ["TypeScript", "Vite", "deck.gl", "Protobuf"],
+    href: "https://github.com/koala73/worldmonitor/pull/5459",
   },
 ];
 
