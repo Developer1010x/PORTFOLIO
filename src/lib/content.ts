@@ -26,7 +26,7 @@ export const stats = [
 export const skills: { group: string; items: string[] }[] = [
   { group: "AI & LLM Systems", items: ["Agentic systems", "MCP orchestration", "Multi-agent workflows", "RAG", "LangChain", "LangGraph", "Claude API", "Evaluation harnesses"] },
   { group: "Infrastructure & DevOps", items: ["CI/CD", "OpenTofu (IaC)", "Ansible", "Docker", "Kubernetes", "Linux", "Linode", "Observability & alerting", "Incident runbooks", "Zitadel (SSO/IAM)", "RBAC"] },
-  { group: "Languages & Backend", items: ["Python", "FastAPI", "REST APIs", "PostgreSQL", "SQL", "Rust", "Swift", "Shell"] },
+  { group: "Languages & Backend", items: ["Python", "C", "C++", "FastAPI", "REST APIs", "PostgreSQL", "SQL", "Rust", "Swift", "Shell"] },
   { group: "ML & Vision", items: ["PyTorch", "TensorFlow", "YOLOv8", "OpenCV", "CNNs", "ResNet", "Quantised deployment"] },
 ];
 
