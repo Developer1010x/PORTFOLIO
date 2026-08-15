@@ -4,7 +4,7 @@ import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { profile } from "@/lib/content";
 
-const title = `${profile.name} — ${profile.role}`;
+const title = `${profile.name}, ${profile.role}`;
 
 export const metadata: Metadata = {
   // Without metadataBase, Next cannot resolve relative image URLs and emits a

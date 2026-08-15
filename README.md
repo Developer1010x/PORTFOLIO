@@ -1,6 +1,6 @@
-# Portfolio — S Prajwall Narayana
+# Portfolio, S Prajwall Narayana
 
-Personal site for **S Prajwall Narayana**, AI Engineer. Nine statically prerendered pages — Home, Experience, Projects, Publications, Blog, Services, Social, About, Contact — built on Next.js 16 App Router with no CSS framework and no client-side JavaScript.
+Personal site for **S Prajwall Narayana**, AI Engineer. Nine statically prerendered pages, Home, Experience, Projects, Publications, Blog, Services, Social, About, Contact, built on Next.js 16 App Router with no CSS framework and no client-side JavaScript.
 
 ![Home page](docs/screenshots/home.jpg)
 
@@ -8,7 +8,7 @@ Personal site for **S Prajwall Narayana**, AI Engineer. Nine statically prerende
 
 **All copy lives in [`src/lib/content.ts`](src/lib/content.ts).** Every page is a pure server component that imports an array and maps over it. There is no CMS, no MDX, no database.
 
-To change anything on this site — a job title, a project bullet, a publication, a stat — edit that one file. Nothing else needs touching.
+To change anything on this site, a job title, a project bullet, a publication, a stat, edit that one file. Nothing else needs touching.
 
 That file also carries a rule, stated at the top and enforced by hand:
 
@@ -20,7 +20,7 @@ The three homepage stats are derived from array lengths where possible, so they 
 
 | | |
 |---|---|
-| **Projects** — selected work, each entry linking to its source | ![Projects](docs/screenshots/projects.jpg) |
+| **Projects**, selected work, each entry linking to its source | ![Projects](docs/screenshots/projects.jpg) |
 
 ### Social card
 
@@ -68,10 +68,10 @@ Routing is filesystem-based; adding a page means adding a folder and a line to `
 A post is **published** only when it has a non-empty `body` (an array of paragraphs). Posts without one:
 
 - are listed on `/blog` under **Planned**, greyed out and **not linked**
-- get **no generated page** — the slug 404s
+- get **no generated page**, the slug 404s
 - stay **out of the sitemap**
 
-This exists because the site previously advertised three posts with real headlines whose pages all rendered *"Draft — this is where the full post goes. Write it in src/lib/content.ts…"* in production. A real title that dead-ends in build instructions reads worse than no blog at all.
+This exists because the site previously advertised three posts with real headlines whose pages all rendered *"Draft, this is where the full post goes. Write it in src/lib/content.ts…"* in production. A real title that dead-ends in build instructions reads worse than no blog at all.
 
 To publish, add a `body` to the post in `content.ts`:
 
@@ -91,7 +91,7 @@ To publish, add a `body` to the post in `content.ts`:
 
 ## Deployment
 
-Targets Vercel. `metadataBase`, the sitemap and `robots.txt` all read the canonical URL from `profile.portfolio` in `content.ts` — set that before deploying to a new domain, and the rest follows.
+Targets Vercel. `metadataBase`, the sitemap and `robots.txt` all read the canonical URL from `profile.portfolio` in `content.ts`, set that before deploying to a new domain, and the rest follows.
 
 > **Note:** `profile.portfolio` currently points at `sprajwallnarayana.vercel.app`, which is presently served by a *different* codebase (a hand-rolled static HTML site with region routing). Decide which repo owns that domain before deploying this one to it.
 

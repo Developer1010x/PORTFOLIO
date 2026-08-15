@@ -7,7 +7,7 @@ export default function ServicesPage() {
   return (
     <section className="container section" style={{ borderTop: "none" }}>
       <p className="eyebrow">Freelance</p>
-      <h1 style={{ fontSize: "2.4rem" }}>I build DevOps pipelines and RAG systems — for real workloads.</h1>
+      <h1 style={{ fontSize: "2.4rem" }}>I build DevOps pipelines and RAG systems for real workloads.</h1>
       <p className="section-sub">Available for select freelance projects. Not demos: production systems with the platform underneath and the evaluation to prove they work. The same discipline I run as a founding-team AI/infra engineer.</p>
 
       <div className="grid grid-2" style={{ marginBottom: 32 }}>

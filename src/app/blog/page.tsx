@@ -25,7 +25,7 @@ export default function BlogPage() {
         <>
           <p className="eyebrow" style={{ marginTop: 44 }}>Planned</p>
           <p style={{ color: "var(--fg-faint)", fontSize: 14, marginTop: -4 }}>
-            Written up but not published yet — these are not links.
+            Written up but not published yet. These are not links.
           </p>
           {planned.map((p) => (
             <div className="entry" key={p.slug} style={{ display: "block", gridTemplateColumns: "1fr", opacity: 0.62 }}>

@@ -1,4 +1,4 @@
-// Single source of truth for the portfolio. All real content — mirrors the CV and LinkedIn.
+// Single source of truth for the portfolio. All real content, mirrors the CV and LinkedIn.
 // No fabricated metrics: every number here is one the CV/evidence file already backs.
 
 export const profile = {
@@ -7,7 +7,7 @@ export const profile = {
   tagline: "AI Infrastructure · LLM Platform · DevOps/SRE",
   headline: "AI Engineer, Founding Team at Colligence Research",
   blurb:
-    "I build across both halves of the same system — the multi-agent and LLM product over MCP, and the DevOps/SRE platform it runs on. The engineer who ships the agent workflow is the engineer who carries the pager for it.",
+    "I build across both halves of the same system, the multi-agent and LLM product over MCP, and the DevOps/SRE platform it runs on. The engineer who ships the agent workflow is the engineer who carries the pager for it.",
   location: "Bengaluru, India · open to UK / Germany / US relocation",
   email: "prajwallnarayana@gmail.com",
   phone: "+91 7760604439",
@@ -48,11 +48,11 @@ export const experience: Role[] = [
     type: "Full-time · Founding team",
     location: "Bengaluru, India",
     period: "Feb 2026 – Present",
-    summary: "Work across both halves of the product — the AI/application engineering and end-to-end ownership of the platform it runs on.",
+    summary: "Work across both halves of the product, the AI/application engineering and end-to-end ownership of the platform it runs on.",
     bullets: [
       "Established the DevOps and SRE function from scratch and now lead it: CI/CD, infrastructure-as-code with OpenTofu and Ansible on Linode, observability, alerting and incident runbooks.",
       "Replaced manual GitHub deploy workflows with automated pipelines, cutting deployment errors for a four-person founding team.",
-      "Operate the production stack end to end — Docker, Zitadel authentication and RBAC, monitored deployments.",
+      "Operate the production stack end to end, Docker, Zitadel authentication and RBAC, monitored deployments.",
       "Own system architecture across infrastructure and tooling; building a retrieval-augmented system into the infrastructure layer so SRE work (runbook lookup, change context, incident response) is grounded in the organisation's own configuration and history.",
     ],
     tech: ["Python", "MCP", "OpenTofu", "Ansible", "Docker", "Linode", "CI/CD", "Zitadel", "Linux"],
@@ -78,13 +78,13 @@ export const experience: Role[] = [
     period: "Nov 2025 – Dec 2025",
     summary: "First LLM integrations for the founding team.",
     bullets: [
-      "Prototyped the founding team's first LLM integrations and agent workflows — the foundation the production multi-agent pipeline was later built on.",
+      "Prototyped the founding team's first LLM integrations and agent workflows, the foundation the production multi-agent pipeline was later built on.",
     ],
     tech: ["Python", "LangChain", "Claude API"],
   },
   {
     company: "RVCE Centre of Excellence",
-    title: "Research Intern — AI & Deep Learning",
+    title: "Research Intern, AI & Deep Learning",
     type: "Internship",
     location: "Remote",
     period: "Oct 2024 – Dec 2024",
@@ -97,7 +97,7 @@ export const experience: Role[] = [
   },
   {
     company: "Ernst & Young",
-    title: "Associate Consultant Intern — Enterprise Cybersecurity",
+    title: "Associate Consultant Intern, Enterprise Cybersecurity",
     type: "Internship",
     location: "Bengaluru, India",
     period: "Aug 2024 – Sep 2024",
@@ -126,7 +126,7 @@ export const projects: Project[] = [
     summary: "Offline-capable multilingual AI healthcare platform with a CI-gated safety evaluation harness.",
     bullets: [
       "Deterministic, rule-based drug-interaction and crisis-detection safety layer the language model cannot override.",
-      "62-case labelled evaluation harness wired in as a CI merge gate — crisis detection recall 1.00 / precision 0.93; emergency 1.00 / 1.00; drug screening 1.00 / 1.00. Building it surfaced a real missed self-harm disclosure.",
+      "62-case labelled evaluation harness wired in as a CI merge gate, crisis detection recall 1.00 / precision 0.93; emergency 1.00 / 1.00; drug screening 1.00 / 1.00. Building it surfaced a real missed self-harm disclosure.",
       "LangGraph report pipeline with multi-model routing; runs fully offline on quantised models, demonstrated on a Raspberry Pi. 3rd place, college final-year showcase. Research paper upcoming.",
     ],
     tech: ["LangGraph", "Ollama", "PyTorch", "YOLOv8", "CI eval harness"],
@@ -135,7 +135,7 @@ export const projects: Project[] = [
   {
     name: "Audier",
     tag: "Flutter · Linux · Local-first",
-    summary: "A private reader and audiobook player for your own book library — released, installable, Linux.",
+    summary: "A private reader and audiobook player for your own book library, released, installable, Linux.",
     bullets: [
       "Opens PDF, EPUB, Markdown and plain text; reads them aloud in a neural voice (Piper) with follow-along highlighting; OCRs scanned pages; optional AI study aids for textbooks across six providers.",
       "Privacy is the design constraint, not a feature: books are read where they sit and never copied or uploaded, speech and OCR run on the machine, and a cloud provider is never the default and always states what it is about to send before it sends it.",
@@ -147,7 +147,7 @@ export const projects: Project[] = [
   {
     name: "openplay",
     tag: "Rust · Systems · Networking",
-    summary: "Open-source screen-casting system in Rust — AirPlay, Miracast, and a native WebRTC protocol.",
+    summary: "Open-source screen-casting system in Rust, AirPlay, Miracast, and a native WebRTC protocol.",
     bullets: [
       "Casts a screen across Linux/macOS/Windows; AirPlay HAP pairing, FairPlay, RTSP negotiation and Wi-Fi Direct implemented in Rust.",
       "mDNS auto-discovery, GStreamer pipelines with hardware-encoder probing, GUI sender/receiver binaries.",
@@ -166,7 +166,7 @@ export const projects: Project[] = [
   {
     name: "pybridge.ai",
     tag: "LLM · Tooling",
-    summary: "Control AI from your phone — routes WhatsApp, Telegram, Email and iMessage to Claude, OpenAI or Ollama.",
+    summary: "Control AI from your phone, routes WhatsApp, Telegram, Email and iMessage to Claude, OpenAI or Ollama.",
     bullets: ["Docker deployment plus a web control panel."],
     tech: ["Python", "Docker", "LLM APIs"],
     href: "https://github.com/Developer1010x/pybridge.ai",
@@ -174,7 +174,7 @@ export const projects: Project[] = [
   {
     name: "LLM Terminal",
     tag: "LLM · CLI",
-    summary: "Lightweight terminal-based LLM assistant — conversational AI from the command line.",
+    summary: "Lightweight terminal-based LLM assistant, conversational AI from the command line.",
     bullets: ["Quick AI queries without leaving the shell."],
     tech: ["Python", "LLM APIs"],
     href: "https://github.com/Developer1010x/LLM_Terminal",
@@ -192,7 +192,7 @@ export const projects: Project[] = [
     tag: "TypeScript · Next.js · Static",
     summary: "A study-material catalogue built around the problem that its links keep dying.",
     bullets: [
-      "Study material lives in Drive folders owned by students who graduate, and those folders get purged — so a link that worked last year quietly dies. A weekly checker distinguishes \"deleted\" from \"needs an institutional login\", badges dead links in the UI, and turns the failures into a public /gaps page: a to-do list for anyone who wants to help.",
+      "Study material lives in Drive folders owned by students who graduate, and those folders get purged, so a link that worked last year quietly dies. A weekly checker distinguishes \"deleted\" from \"needs an institutional login\", badges dead links in the UI, and turns the failures into a public /gaps page: a to-do list for anyone who wants to help.",
       "16 departments → year → semester → subject, with client-side search, a command palette, bookmarks and progress, a PWA, and an RSS feed dated from git history.",
       "538 statically prerendered pages, TypeScript strict, no backend and no database.",
     ],
@@ -224,7 +224,7 @@ export const projects: Project[] = [
   {
     name: "World Monitor",
     tag: "Open-source contribution · TypeScript",
-    summary: "Contributor to a real-time geopolitical and financial intelligence dashboard — not my project.",
+    summary: "Contributor to a real-time geopolitical and financial intelligence dashboard, not my project.",
     bullets: [
       "Merged upstream PR koala73/worldmonitor#5459: an expandable terminal price chart with its own interaction layer for the markets panel, plus a fix to the OpenSky dev proxy path. +892 / −39 across 37 files.",
       "The codebase is ~330k lines of TypeScript with roughly 40 contributors, 933 test files, 21 CI workflows and 281 protobuf contracts. Getting a change through that review gate is the point of listing it.",
@@ -266,7 +266,7 @@ export const education = [
   {
     school: "National Academy of Learning",
     degree: "Higher Secondary (Class 11–12), Science (PCMC)",
-    grade: "Physics, Maths, Chemistry, Computer Science — with Python",
+    grade: "Physics, Maths, Chemistry, Computer Science, with Python",
     period: "2019 – 2021",
     note: "Received undergraduate offers in Mechanical Engineering from Liverpool, Leeds, Warwick, Manchester and Edinburgh.",
   },
@@ -277,27 +277,27 @@ export const services = [
   {
     title: "RAG systems that hold up",
     body:
-      "Retrieval-augmented systems over your own corpus — hybrid retrieval, reranking, and a labelled evaluation harness wired into CI so quality is measured, not hoped for. The same discipline behind Arogya-Sathi's 62-case, CI-gated safety eval (recall 1.00).",
+      "Retrieval-augmented systems over your own corpus, hybrid retrieval, reranking, and a labelled evaluation harness wired into CI so quality is measured, not hoped for. The same discipline behind Arogya-Sathi's 62-case, CI-gated safety eval (recall 1.00).",
     points: ["Corpus ingestion + hybrid (BM25 + dense) retrieval", "Cross-encoder reranking", "Golden-set eval harness as a CI merge gate", "Cost & latency instrumentation"],
   },
   {
     title: "DevOps / SRE, end to end",
     body:
-      "The platform your product runs on — CI/CD, infrastructure-as-code, containerisation, observability and incident runbooks. Built the DevOps/SRE function from scratch at a founding-team startup and carry the pager for it.",
+      "The platform your product runs on, CI/CD, infrastructure-as-code, containerisation, observability and incident runbooks. Built the DevOps/SRE function from scratch at a founding-team startup and carry the pager for it.",
     points: ["CI/CD pipelines (GitHub Actions, GitLab)", "IaC with OpenTofu / Ansible", "Docker & Kubernetes", "Observability, alerting, runbooks", "Auth: Zitadel / OAuth / RBAC"],
   },
   {
     title: "LLM & agent pipelines",
     body:
-      "Multi-agent and LLM systems over MCP with LangGraph/LangChain, kept on-device with local models where the data is sensitive, and shipped as a monitored service — not a demo.",
+      "Multi-agent and LLM systems over MCP with LangGraph/LangChain, kept on-device with local models where the data is sensitive, and shipped as a monitored service, not a demo.",
     points: ["Multi-agent workflows (LangGraph, MCP)", "Local/offline LLM deployment", "Evaluation & guardrails", "Backend APIs (FastAPI)"],
   },
 ];
 
-// Social / community — volunteering, clubs, honours.
+// Social / community, volunteering, clubs, honours.
 export const community = {
   honours: [
-    { title: "Best All-Rounder — NSS", note: "Recognised for contribution to the National Service Scheme at RVCE." },
+    { title: "Best All-Rounder, NSS", note: "Recognised for contribution to the National Service Scheme at RVCE." },
   ],
   organisations: [
     { name: "National Service Scheme (NSS), RVCE", role: "Volunteer", note: "Community-service and social-outreach activities." },
@@ -310,7 +310,7 @@ export const community = {
 //
 // A post is PUBLISHED only when it has a non-empty `body`: an array of
 // paragraphs. Posts without one are listed as planned and are not linked, do not
-// get a generated page, and stay out of the sitemap — so the site never shows a
+// get a generated page, and stay out of the sitemap, so the site never shows a
 // real headline that dead-ends in an empty page.
 export type Post = {
   slug: string;
@@ -328,7 +328,7 @@ export const posts: Post[] = [
     date: "2026-08-11",
     tag: "systems",
     excerpt:
-      "Exit code 137 isn't the scheduler — it's the kernel's cgroup OOM killer. What the kernel is actually doing when a pod dies, and why request=limit is often the real fix.",
+      "Exit code 137 isn't the scheduler, it's the kernel's cgroup OOM killer. What the kernel is actually doing when a pod dies, and why request=limit is often the real fix.",
   },
   {
     slug: "eval-harness-before-retrieval",
@@ -336,7 +336,7 @@ export const posts: Post[] = [
     date: "2026-08-11",
     tag: "ml",
     excerpt:
-      "You cannot improve what you cannot measure. Why a labelled golden set + recall@k in CI should come first in any RAG build — and how a 62-case harness caught a missed self-harm disclosure.",
+      "You cannot improve what you cannot measure. Why a labelled golden set + recall@k in CI should come first in any RAG build, and how a 62-case harness caught a missed self-harm disclosure.",
   },
   {
     slug: "fully-tested-still-broken",
@@ -344,6 +344,6 @@ export const posts: Post[] = [
     date: "2026-08-11",
     tag: "engineering",
     excerpt:
-      "A codebase with 68 green tests where nothing works, because no binary constructs the pieces. Compiles-and-tests-green ≠ works — a lesson from wiring up a Rust screen-caster.",
+      "A codebase with 68 green tests where nothing works, because no binary constructs the pieces. Compiles-and-tests-green ≠ works, a lesson from wiring up a Rust screen-caster.",
   },
 ];

@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { profile, stats } from "@/lib/content";
 
 // Generated at build time, so the social card never drifts from content.ts.
-export const alt = `${profile.name} — ${profile.role}`;
+export const alt = `${profile.name}, ${profile.role}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

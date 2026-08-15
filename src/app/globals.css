@@ -98,7 +98,7 @@ a.card:hover, .card.hover:hover { border-color: var(--border-hi); transform: tra
   .entry { grid-template-columns: 1fr; gap: 10px; }
 
   /* The header used to `display: none` every link except the Contact CTA, with
-     no hamburger anywhere in the codebase — so on a phone the whole site was
+     no hamburger anywhere in the codebase, so on a phone the whole site was
      unreachable from the top of the page. The site has no client components, so
      a JS drawer is not an option; scroll the links horizontally instead. */
   .nav-inner { flex-wrap: wrap; gap: 8px; height: auto; padding: 10px 0; }
