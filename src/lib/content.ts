@@ -240,7 +240,7 @@ export const projects: Project[] = [
     bullets: [
       "Merged upstream PR nushell/nushell#19017: `mkdir --verbose` reported directories as created when they already existed, because the uutils call runs with `recursive` set and succeeds silently on an existing path.",
       "Started from a broken example in Apache DataFusion's Python bindings, where no CI job ran `examples/*.py`. That exposed `null_regex`, a documented CSV option that reached DataFusion but never reached the reader parsing the rows, so `N/A` placeholders stayed literal strings and failed outright in numeric columns. Tracing that turned up a second defect on the same path, where an invalid pattern panicked the query task instead of returning an error.",
-      "Four pull requests open for review across apache/datafusion, apache/datafusion-python and nushell, plus three bug reports filed upstream. Every fix ships with a test checked against the reverted change, so it fails without the fix.",
+      "Five pull requests open for review across apache/datafusion, apache/datafusion-python and nushell, plus three bug reports filed upstream. Every fix ships with a test checked against the reverted change, so it fails without the fix.",
     ],
     tech: ["Rust", "Python", "Apache DataFusion", "Nushell"],
     href: "https://github.com/nushell/nushell/pull/19017",
