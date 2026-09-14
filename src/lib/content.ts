@@ -236,11 +236,11 @@ export const projects: Project[] = [
   {
     name: "Apache DataFusion and Nushell",
     tag: "Open-source contributions · Rust · Python",
-    summary: "Upstream fixes to an Apache query engine and to Nushell, not my projects.",
+    summary: "Three merged upstream fixes to Nushell, and open work on an Apache query engine. Not my projects.",
     bullets: [
-      "Merged upstream PR nushell/nushell#19017: `mkdir --verbose` reported directories as created when they already existed, because the uutils call runs with `recursive` set and succeeds silently on an existing path.",
+      "Three merged upstream PRs to Nushell: #19017, where `mkdir --verbose` reported directories as created when they already existed; #19023, where the same command documented output it cannot produce; and #19024, where `view source` rendered a rest parameter as `...rest:string` while every other parameter kind gets a space after the colon.",
       "Started from a broken example in Apache DataFusion's Python bindings, where no CI job ran `examples/*.py`. That exposed `null_regex`, a documented CSV option that reached DataFusion but never reached the reader parsing the rows, so `N/A` placeholders stayed literal strings and failed outright in numeric columns. Tracing that turned up a second defect on the same path, where an invalid pattern panicked the query task instead of returning an error.",
-      "Five pull requests open for review across apache/datafusion, apache/datafusion-python and nushell, plus three bug reports filed upstream. Every fix ships with a test checked against the reverted change, so it fails without the fix.",
+      "Three more pull requests open for review across apache/datafusion and apache/datafusion-python, plus three bug reports filed upstream. Every fix ships with a test checked against the reverted change, so it fails without the fix.",
     ],
     tech: ["Rust", "Python", "Apache DataFusion", "Nushell"],
     href: "https://github.com/nushell/nushell/pull/19017",
